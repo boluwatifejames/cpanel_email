@@ -33,7 +33,7 @@ public class EmailService {
 
 
         public void sendMessage(Contact contact) {
-            String companyMail = "bosingwa100@gmail.com";
+            String companyMail = "recepient@gmail.com";
             sendEmail(companyMail, "Contact Us Inquiry", constructContactMessage(contact));
         }
 
