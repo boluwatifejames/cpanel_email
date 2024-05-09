@@ -19,22 +19,19 @@ import java.util.Properties;
 @Service
 public class EmailService {
 
-//        @Value("${mail.host}")
-//        private String host;
-//
-//        @Value("${mail.port}")
-//        private String port;
-//
-//        @Value("${mail.username}")
-//        private String username;
-//
-//        @Value("${mail.password}")
-//        private String password;
+        @Value("${mail.host}")
+        private String host;
 
-    private final String host = "smtp-relay.gmail.com";
-    private final String port = "587";
-    private final String username = "bosingwa100@gmail.com";
-    private final String password = "azah shga mzaz fclr";
+        @Value("${mail.port}")
+        private String port;
+
+        @Value("${mail.username}")
+        private String username;
+
+        @Value("${mail.password}")
+        private String password;
+
+
         public void sendMessage(Contact contact) {
             String companyMail = "bosingwa100@gmail.com";
             sendEmail(companyMail, "Contact Us Inquiry", constructContactMessage(contact));
